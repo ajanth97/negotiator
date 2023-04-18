@@ -59,7 +59,7 @@ Negotiator.prototype.language = function language(available) {
 };
 
 Negotiator.prototype.languages = function languages(available) {
-  return preferredLanguages(this.request.headers['accept-language'], available);
+  return preferredLanguages(this.request.headers.get('accept-language'), available);
 };
 
 Negotiator.prototype.mediaType = function mediaType(available) {
